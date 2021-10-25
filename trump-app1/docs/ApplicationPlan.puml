@@ -1,11 +1,29 @@
 @startuml
-'https://plantuml.com/sequence-diagram
 
-autonumber
+class SaveOrOpen{
+    +saveFile()
+    +openFile()
+}
 
-Alice -> Bob: Authentication Request
-Bob --> Alice: Authentication Response
+class Main{
+    +start()
+    +main()
+}
 
-Alice -> Bob: Another authentication Request
-Alice <-- Bob: another authentication Response
+class Application{
+    +addaList()
+    +delaList()
+    +exitTheProgram()
+    +loadList()
+    +saveList()
+    +showAllItems()
+    +showCompletedItems()
+    +showIncompletedItems()
+    +showItemsOfList(ActionEvent event)
+}
+
+
+Main -- Application
+
+Application -- SaveOrOpen
 @enduml

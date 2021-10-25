@@ -7,10 +7,8 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.TableView;
 
 public class Application {
+    //create a list of lists to
 
-
-
-    
     @FXML
     private MenuItem addList;
 
@@ -28,14 +26,6 @@ public class Application {
     }
 
     @FXML
-    private MenuItem editList;
-
-    @FXML
-    public void editaList(){
-
-    }
-
-    @FXML
     private MenuItem exitProgram;
 
     @FXML
@@ -47,12 +37,23 @@ public class Application {
     @FXML
     private TableView<?> itemsLists;
 
+
+    @FXML
+    private MenuItem loadLists;
+
+    @FXML
+    public void loadList(){
+        //create a constructor of SaveOrOpen
+        //call the openFile method
+    }
+
     @FXML
     private MenuItem saveLists;
 
     @FXML
     public void saveList(){
-
+        //create a constructor of SaveOrOpen
+        //call the saveFile method with an arrayList of the selected parameters
     }
 
     @FXML
@@ -76,7 +77,7 @@ public class Application {
 
     @FXML
     public void showIncompletedItems(){
-
+        //
     }
 
     @FXML
