@@ -7,14 +7,27 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.TableView;
 
 public class Application {
-    //create a list of lists to
+    //create a list of lists named todoLists to hold each to-do list
+    //create another list named itemsList to hold each item
+
+    public void updateToDoList(){
+        //clear the todoLists
+        //go through every top element in the list of lists and add it to the todoLists
+    }
+
+    public void updateItemList(){
+        //clear the itemsList
+        //go through every element in the selected list of lists list and add it to the itemsLists
+    }
 
     @FXML
     private MenuItem addList;
 
     @FXML
     public void addaList(){
-
+        //this will open the AddList fxml file
+        //After the user inputs the list title,
+        //this method will add a list to the lists of lists
     }
 
     @FXML
@@ -22,7 +35,10 @@ public class Application {
 
     @FXML
     public void delaList(){
-
+        //this will delete a selected list
+        //it does this by getting the selected text
+        //and iterating through the list until it finds the selected list
+        //then it will delete it
     }
 
     @FXML
@@ -30,12 +46,11 @@ public class Application {
 
     @FXML
     public void exitTheProgram(){
-
+        //close the stage when clicked
     }
 
-    //This is the top list that shows all to-do lists available
     @FXML
-    private TableView<?> itemsLists;
+    private TableView<String> itemsLists;
 
 
     @FXML
@@ -61,7 +76,7 @@ public class Application {
 
     @FXML
     public void showAllItems(){
-
+        //this is the default show method that will show all items within a specific arraylist
     }
 
     @FXML
@@ -69,7 +84,13 @@ public class Application {
 
     @FXML
     public void showCompletedItems(){
+        //this method will only populate itemsList with items that have a true value
+        //in their completed section
 
+        //In order to do this we have to filter the itemsList
+        //create a new arraylist to store the filtered items and set it equal to null
+        //use filterfield to find items with a true value in their completed section
+        //update the itemslist
     }
 
     @FXML
@@ -77,7 +98,13 @@ public class Application {
 
     @FXML
     public void showIncompletedItems(){
-        //
+        //this method will only populate itemsList with items that have a false value
+        //in their completed section
+
+        //In order to do this we have to filter the itemsList
+        //create a new arraylist to store the filtered items and set it equal to null
+        //use filterfield to find items with a false value in their completed section
+        //update the itemslist
     }
 
     @FXML
@@ -85,9 +112,12 @@ public class Application {
 
     @FXML
     public void showItemsOfList(ActionEvent event){
-
+        //This method will take the highlighted field and show the items of that list
+        //It will have to iterate through the lists to find the correct to-do list
+        //then it will have to update the listview with the contents of the highlighted field
     }
 
+    //This is the top list that shows all to-do lists available
     @FXML
     private ListView<?> todoLists;
 
